@@ -2,7 +2,7 @@ const { userService } = require("../../services");
 
 const getUsers = async (req, res) => {
   try {
-    const data = await userService.getUser();
+    const data = await userService.getUsers();
     res.status(200).json({ data });
   } catch (error) {
     res.status(500).json({ error: error.message });

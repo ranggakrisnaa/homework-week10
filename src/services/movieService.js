@@ -4,8 +4,8 @@ const getMovie = () => {
   return movieRepository.findAll();
 };
 
-const createMovie = (body) => {
-  return movieRepository.create(body);
+const createMovie = (args) => {
+  return movieRepository.create(args);
 };
 
 module.exports = { createMovie, getMovie };

@@ -5,7 +5,7 @@ const CONFIG_DIR = path.join(__dirname, "config");
 const DB_DIR = path.join(__dirname, "db");
 
 module.exports = {
-  "config": path.resolve(CONFIG_DIR, "config.json"),
+  "config": path.resolve(CONFIG_DIR, "config.js"),
   "models-path": path.resolve(APP_DIR, "models"),
   "migrations-path": path.resolve(DB_DIR, "migrations"),
   "seeders-path": path.resolve(DB_DIR, "seeders"),

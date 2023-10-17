@@ -1,6 +1,6 @@
 const { userRepository } = require("../repositories");
 
-const getUser = () => {
+const getUsers = () => {
   return userRepository.findAll();
 };
 
@@ -8,4 +8,4 @@ const getUserId = (id) => {
   return userRepository.findbyId(id);
 };
 
-module.exports = { getUser, getUserId };
+module.exports = { getUsers, getUserId };
