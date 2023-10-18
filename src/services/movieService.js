@@ -8,8 +8,13 @@ const getMovieId = (id) => {
   return movieRepository.findOne(id);
 };
 
+const updateMovie = (args, id) => {
+  console.log(args);
+  return movieRepository.update(args, id);
+};
+
 const createMovie = (args) => {
   return movieRepository.create(args);
 };
 
-module.exports = { createMovie, getMovies, getMovieId };
+module.exports = { createMovie, getMovies, getMovieId, updateMovie };
