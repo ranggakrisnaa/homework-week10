@@ -23,7 +23,7 @@ const updateMovie = async (req, res) => {
     };
 
     const movie = await movieService.getMovieId(id);
-    console.log(movie);
+    res.json({ movie });
   } catch (error) {}
 };
 
