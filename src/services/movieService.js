@@ -1,11 +1,15 @@
 const { movieRepository } = require("../repositories");
 
-const getMovie = () => {
+const getMovies = () => {
   return movieRepository.findAll();
+};
+
+const getMovieId = (id) => {
+  return movieRepository.findOne(id);
 };
 
 const createMovie = (args) => {
   return movieRepository.create(args);
 };
 
-module.exports = { createMovie, getMovie };
+module.exports = { createMovie, getMovies, getMovieId };

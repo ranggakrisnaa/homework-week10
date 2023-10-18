@@ -4,8 +4,8 @@ const findAll = () => {
   return Movie.findAll();
 };
 
-const findOne = () => {
-  return Movie.findOne();
+const findOne = (id) => {
+  return Movie.findOne({ where: { id } });
 };
 
 const create = (args) => {

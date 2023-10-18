@@ -11,4 +11,20 @@ const createMovie = async (req, res) => {
   }
 };
 
-module.exports = { createMovie };
+const updateMovie = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, genres, year } = req.body;
+
+    const updatedData = {
+      title,
+      genres,
+      year,
+    };
+
+    const movie = await movieService.getMovieId(id);
+    console.log(movie);
+  } catch (error) {}
+};
+
+module.exports = { createMovie, updateMovie };
