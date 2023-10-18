@@ -9,7 +9,6 @@ const getMovieId = (id) => {
 };
 
 const updateMovie = (args, id) => {
-  console.log(args);
   return movieRepository.update(args, id);
 };
 

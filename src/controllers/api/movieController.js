@@ -3,8 +3,7 @@ const { movieService } = require("../../services");
 const createMovie = async (req, res) => {
   try {
     const { title, genres, year } = req.body;
-    const { avatar } = req.file;
-    console.log(avatar);
+
     await movieService.createMovie({ title, genres, year });
     res.json({ message: "data successfully created" });
   } catch (error) {
@@ -12,11 +11,12 @@ const createMovie = async (req, res) => {
   }
 };
 
-const updateMovie = async (req, res) => {
+const updateMovie = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { title, genres, year } = req.body;
-
+    const file = req.file;
+    console.log(file);
     const updatedData = {
       title,
       genres,
@@ -24,6 +24,7 @@ const updateMovie = async (req, res) => {
     };
 
     const movie = await movieService.getMovieId(id);
+
     if (movie) {
       const data = await movieService.updateMovie(updatedData, id);
     } else {

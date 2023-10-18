@@ -4,6 +4,6 @@ const movieController = require("../controllers/api/movieController");
 const { upload } = require("../middleware/uploadFile");
 
 router.post("/movie", movieController.createMovie);
-router.put("/movie/:id", upload.single("avatar"), movieController.updateMovie);
+router.put("/movie/:id", upload.single("file"), movieController.updateMovie);
 
 module.exports = router;
