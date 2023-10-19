@@ -53,7 +53,7 @@ const uploadImage = async (req, res, next) => {
     const id = req.params.id;
     const movie = await movieService.getMovieId(id);
     if (!movie) throw { name: "errNotFound" };
-    await movieService.uploadImage(req, movie, id);
+    await movieService.uploadImage(req, id);
 
     res
       .status(200)

@@ -3,12 +3,12 @@ const { movieRepository } = require("../repositories");
 const createMovie = (args) => {
   try {
     const { title, genres, year } = args;
-
     const moviePayload = {
       title,
       genres,
       year,
     };
+
     return movieRepository.create(moviePayload);
   } catch (error) {
     throw err;
@@ -55,7 +55,6 @@ const uploadImage = (req, id) => {
 
       const imageUrl = `http://localhost:8081/public/${file}`;
       imagePayload = {
-        ...imagePayload,
         photo: imageUrl,
       };
     }

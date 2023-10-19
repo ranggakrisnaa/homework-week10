@@ -19,6 +19,7 @@ const update = async (args, id) => {
   const data = await User.findOne({
     where: { id },
   });
+
   return data.update(args);
 };
 
@@ -26,6 +27,7 @@ const destroy = async (id) => {
   const data = await User.findOne({
     where: { id },
   });
+
   return data.destroy();
 };
 

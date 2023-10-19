@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 9091;
 
 app.use(morgan("tiny"));
-app.use("publics", express.static("public"));
+app.use("/public", express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);

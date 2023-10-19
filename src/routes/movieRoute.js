@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const movieController = require("../controllers/api/movieController");
-const { upload, upload2 } = require("../middlewares/uploadFile");
+const { upload } = require("../middlewares/uploadFile");
 
 router.post("/movie", movieController.createMovie);
 router.get("/movie", movieController.getMovies);
