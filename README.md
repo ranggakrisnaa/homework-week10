@@ -10,8 +10,9 @@ Kerjakan soal homework ini berdasarkan data SQL [berikut](https://github.com/fat
 2. Terapkan design Pattern MVC + Repository pada code teman-teman
 ```
 ###
-Instruksi
-Berisi langkah-langkah pengerjaan homework dan juga estimasi waktu
+Instruksi:
+###
+Berisi langkah-langkah pengerjaan homework 
 ###
 ```markdown
 Step 1: Buatlah dan susun folder-folder untuk mengikuti design pattern MVC dan Repositories
