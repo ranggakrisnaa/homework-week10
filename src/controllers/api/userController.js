@@ -27,6 +27,7 @@ const getUsers = async (req, res, next) => {
 const getUserId = async (req, res, next) => {
   try {
     const user = await userService.getUserId(req.params.id);
+    if (!user) throw { name: "errNotFound" };
 
     res.status(200).json({ success: true, data: user });
   } catch (error) {
