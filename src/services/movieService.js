@@ -8,20 +8,17 @@ const getMovies = (args) => {
   }
 };
 
-const getMovieId = (args) => {
+const getMovieId = (id) => {
   try {
-    const { id } = args;
-    console.log(id);
     return movieRepository.findOne(id);
   } catch (error) {
     throw error;
   }
 };
 
-const updateMovie = (req, data) => {
+const updateMovie = (req, id) => {
   try {
     const { title, genres, year } = req.body;
-
     let moviePayload = {
       title,
       genres,
@@ -36,7 +33,8 @@ const updateMovie = (req, data) => {
         photo: imageUrl,
       };
     }
-    return movieRepository.update(moviePayload, data);
+
+    return movieRepository.update(moviePayload, id);
   } catch (error) {
     throw error;
   }
@@ -57,9 +55,9 @@ const createMovie = (args) => {
   }
 };
 
-const deleteMovie = (args) => {
+const deleteMovie = (id) => {
   try {
-    return movieRepository.destroy(args);
+    return movieRepository.destroy(id);
   } catch (error) {
     throw error;
   }

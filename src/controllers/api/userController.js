@@ -7,7 +7,7 @@ const createUser = async (req, res, next) => {
     await userService.createUser(req.body);
 
     res
-      .statu(201)
+      .status(201)
       .json({ success: "true", message: "User Created Successfully" });
   } catch (error) {
     next(error);
@@ -26,7 +26,7 @@ const getUsers = async (req, res, next) => {
 
 const getUserId = async (req, res, next) => {
   try {
-    const user = await userService.getUserId(req.params);
+    const user = await userService.getUserId(req.params.id);
 
     res.status(200).json({ success: true, data: user });
   } catch (error) {
@@ -36,11 +36,14 @@ const getUserId = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
   try {
-    const user = await userService.getUserId(req.params);
+    const id = req.params.id;
+    const user = await userService.getUserId(id);
     if (!user) throw { name: "errNotFound" };
-    await userService.updateUser(req, user);
+    await userService.updateUser(req, id);
 
-    res.status(200).json({ success: true, message: "success" });
+    res
+      .status(200)
+      .json({ success: true, message: "User Updated Successfully" });
   } catch (error) {
     next(error);
   }
@@ -48,11 +51,14 @@ const updateUser = async (req, res, next) => {
 
 const deleteUser = async (req, res, next) => {
   try {
-    const user = await userService.getUserId(req.params);
+    const id = req.params.id;
+    const user = await userService.getUserId(id);
     if (!user) throw { name: "errNotFound" };
-    await userService.deleteUser(user);
+    await userService.deleteUser(id);
 
-    res.status(200).json({ success: true, message: "succes" });
+    res
+      .status(200)
+      .json({ success: true, message: "User Deleted Successfully" });
   } catch (error) {
     next(error);
   }

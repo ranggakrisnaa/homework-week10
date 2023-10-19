@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
 app.use(errorHandler);
+
 app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
 });

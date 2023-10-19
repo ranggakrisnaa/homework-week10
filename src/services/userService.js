@@ -24,16 +24,15 @@ const getUsers = () => {
   }
 };
 
-const getUserId = (args) => {
+const getUserId = (id) => {
   try {
-    const { id } = args;
     return userRepository.findbyId(id);
   } catch (error) {
     throw error;
   }
 };
 
-const updateUser = (req, data) => {
+const updateUser = (req, id) => {
   try {
     const { email, role, gender, password } = req.body;
     const userPayload = {
@@ -43,15 +42,15 @@ const updateUser = (req, data) => {
       gender,
     };
 
-    return userRepository.update(userPayload, data);
+    return userRepository.update(userPayload, id);
   } catch (error) {
     throw error;
   }
 };
 
-const deleteUser = (args) => {
+const deleteUser = (id) => {
   try {
-    return userRepository.destroy(args);
+    return userRepository.destroy(id);
   } catch (error) {
     throw error;
   }

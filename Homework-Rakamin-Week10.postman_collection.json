@@ -1,0 +1,978 @@
+{
+	"info": {
+		"_postman_id": "137ef4c4-2069-4467-bbdb-7dfb33f2a43b",
+		"name": "Homework-Rakamin-Week10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29492816"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"asd@gmail\",\r\n    \"password\": \"ranasdgga\",\r\n    \"role\":  \"guru\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "asd",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"asd@gmail\",\r\n    \"password\": \"ranasdgga\",\r\n    \"role\":  \"guru\",\r\n    \"gender\": \"male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-kR6O7Ee4WfZ3E0OIl9cdcutVeIs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:23:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"true\",\n    \"message\": \"User Created Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9786"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"263a-vdJh8jzS7dcoId7XKnIE1kG7x2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:23:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"email\": \"oainger0@craigslist.org\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"KcAk6Mrg7DRM\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"hblything1@de.vu\",\n            \"role\": \"Engineer\",\n            \"password\": \"QLXkU4wnRVbh\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"sivermee2@vkontakte.ru\",\n            \"role\": \"Architect\",\n            \"password\": \"cQQ0flW\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"loak5@nifty.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"46sy8hp1eJ\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"ebroadey6@guardian.co.uk\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"YkEXnE\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"dtoupe7@surveymonkey.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"QvhyaX\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"jborsnall8@mediafire.com\",\n            \"role\": \"Surveyor\",\n            \"password\": \"rFEoyMIhq3mF\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"ibradnecka@clickbank.net\",\n            \"role\": \"Estimator\",\n            \"password\": \"LSXxJK\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"dwoodrooffeb@purevolume.com\",\n            \"role\": \"Supervisor\",\n            \"password\": \"IdyhrRQZ718W\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"amooresc@wikispaces.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"RDrCEPDuJ\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"kknightd@deliciousdays.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"zKKphzIdn\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"bharrisse@delicious.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"RSWYsH240nj\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"drevang@yellowpages.com\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"pU0vIZ5HeZa\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"cbaldockh@typepad.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"wf8GZ2zHkK\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"hdobrowskii@usnews.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"ylquO3oCuD\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"lwalewskij@domainmarket.com\",\n            \"role\": \"Surveyor\",\n            \"password\": \"PoSJTqDJkJu\",\n            \"gender\": \"Genderfluid\"\n        },\n        {\n            \"email\": \"ovanyatink@hugedomains.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"HWg7m2l3p\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"emacbethl@tripod.com\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"DW1WhUg416\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"isiemonm@washingtonpost.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"RcN8UVPG\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"rforgann@linkedin.com\",\n            \"role\": \"Construction Expeditor\",\n            \"password\": \"qanYYdN\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"vaggiso@usgs.gov\",\n            \"role\": \"Architect\",\n            \"password\": \"101IqYhQEu\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"mstowtep@ezinearticles.com\",\n            \"role\": \"Supervisor\",\n            \"password\": \"wzrJ5FOS\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"bgrieveq@ycombinator.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"Wl7DxU\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"mcluneyr@instagram.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"XfqCxSx\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"scamplings@people.com.cn\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"HPA7rBeO5z4z\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"sflavellet@msn.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"XcqMCe8l08\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"rtrassu@wiley.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"cjpwrYt\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"eogelbev@youtu.be\",\n            \"role\": \"Project Manager\",\n            \"password\": \"quXBIavRSi\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"vwhittenburyw@weather.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"2TkaD2B\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"jcoakleyx@booking.com\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"8npHDaZeC\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"cdysarty@gov.uk\",\n            \"role\": \"Project Manager\",\n            \"password\": \"vcYRsxv0\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"kyeelesz@ted.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"mfCgAgQSQ\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"gdallinder10@wikipedia.org\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"dlC0FP6ye\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"jchaim11@tmall.com\",\n            \"role\": \"Architect\",\n            \"password\": \"s2o6Wn889U\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"mczapla12@mysql.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"CMzhg3mf\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"jmiddle13@sohu.com\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"uYomHw1T\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"mjodrelle14@reddit.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"TjvO7Lu\",\n            \"gender\": \"Genderqueer\"\n        },\n        {\n            \"email\": \"nvanetti15@hubpages.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"JCndXgKlpOVz\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"porbell16@mit.edu\",\n            \"role\": \"Engineer\",\n            \"password\": \"D8iv4d7u\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"ggabbatiss17@sun.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"VLahPUeY\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"asterricks18@cdbaby.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"u9IYZr\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"skibbee19@hatena.ne.jp\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"6hhuUZI\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"mgullick1a@google.com.br\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"5Um7pk\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"hpebworth1b@flickr.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"zLY23wqE\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"ematterface1c@hud.gov\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"IqXMqHX1dqZI\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"bmacneilage1d@photobucket.com\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"jOn56QwXu0\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"scharlo1e@columbia.edu\",\n            \"role\": \"Estimator\",\n            \"password\": \"XwOXpF2o\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"egeelan1f@reverbnation.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"eo8o49n\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tnegro1g@businessinsider.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"msbmE7VYO\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"abarette1h@economist.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"pJhz9oD\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"gwarrier1i@alexa.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"vALnpHEe5Ls\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"lridge1j@mit.edu\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"CxQ0xKCeusmx\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"bwelldrake1k@lulu.com\",\n            \"role\": \"Construction Manager\",\n            \"password\": \"TUpIGkydUS5\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"fmoncey1l@is.gd\",\n            \"role\": \"Surveyor\",\n            \"password\": \"caxRTR\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"codogherty1m@cnn.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"uaxexy7K\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"aflaubert1n@lycos.com\",\n            \"role\": \"Construction Expeditor\",\n            \"password\": \"BLobMX49FfOe\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"grattery1o@unblog.fr\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"R0vX8qB\",\n            \"gender\": \"Bigender\"\n        },\n        {\n            \"email\": \"nmcelory1p@purevolume.com\",\n            \"role\": \"Architect\",\n            \"password\": \"0rodhPg\",\n            \"gender\": \"Agender\"\n        },\n        {\n            \"email\": \"bmattiassi1q@discovery.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"cgIWWaui6Eto\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"jjenking1r@lycos.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"RKQ0YcsD0Q\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"rsartain1s@diigo.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"BnVh8nIPoFz\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"eandreas1t@bing.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"02xcGrtP\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"elilleman1u@nhs.uk\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"M069bmTA\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"jbachs1v@tumblr.com\",\n            \"role\": \"Project Manager\",\n            \"password\": \"0dhxcWTlqI\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"sslayton1w@webeden.co.uk\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"fSoZFZ1f\",\n            \"gender\": \"Genderfluid\"\n        },\n        {\n            \"email\": \"rwilby1x@stumbleupon.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"1Eis0oPLtZa\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"aspreckley1y@eventbrite.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"9UwgSi\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"cgorghetto1z@amazon.com\",\n            \"role\": \"Project Manager\",\n            \"password\": \"9iunBFGj\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"ctreuge20@geocities.jp\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"RfRfdUe\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"bsavage21@about.com\",\n            \"role\": \"Project Manager\",\n            \"password\": \"OpUmD57qr3\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"nfrift22@bizjournals.com\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"OuoSRXNL02q\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"lbranton23@nature.com\",\n            \"role\": \"Architect\",\n            \"password\": \"tp8Nh6Q\",\n            \"gender\": \"Non-binary\"\n        },\n        {\n            \"email\": \"dworvill24@utexas.edu\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"wqgonO\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"bbilling25@shop-pro.jp\",\n            \"role\": \"Engineer\",\n            \"password\": \"deh5cBZ\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tdelahaye26@statcounter.com\",\n            \"role\": \"Engineer\",\n            \"password\": \"wIsr5g\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"jseath27@cornell.edu\",\n            \"role\": \"Construction Expeditor\",\n            \"password\": \"kq81gRLpMOKJ\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"votoole28@friendfeed.com\",\n            \"role\": \"Project Manager\",\n            \"password\": \"eui66Ct23z\",\n            \"gender\": \"Polygender\"\n        },\n        {\n            \"email\": \"kcortez29@hao123.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"IW9jHyFWHC\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"coldford2a@scientificamerican.com\",\n            \"role\": \"Surveyor\",\n            \"password\": \"pkZ8BZ58\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"kdoorbar2b@si.edu\",\n            \"role\": \"Engineer\",\n            \"password\": \"0t024J\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"dmizen2c@berkeley.edu\",\n            \"role\": \"Project Manager\",\n            \"password\": \"f1KdDMMjS\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"waldred2d@thetimes.co.uk\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"yVNQzjaQ\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"nclulee2e@cloudflare.com\",\n            \"role\": \"Architect\",\n            \"password\": \"RbqPLdCAgn\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"rdanielsson2f@opera.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"faECcaM\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"ehailwood2g@shareasale.com\",\n            \"role\": \"Architect\",\n            \"password\": \"onZHOEmlLc\",\n            \"gender\": \"Non-binary\"\n        },\n        {\n            \"email\": \"aanyon2h@shareasale.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"QfmF0xdT\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"rvasic2i@ihg.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"gTLp0Woas\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tesupdate@gmail.com\",\n            \"role\": \"Construction Worker\",\n            \"password\": \"nePyrtWqBf\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tesupdate@gmail.com\",\n            \"role\": \"Architect\",\n            \"password\": \"djBYiXGePym\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"rzarb2j@pcworld.com\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"C1ZmRFsrG2\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tvennart2k@google.it\",\n            \"role\": \"Subcontractor\",\n            \"password\": \"xYYRAKf1eFk\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"nstuther2l@google.it\",\n            \"role\": \"Surveyor\",\n            \"password\": \"aSpkH8\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"hlotterington2m@ed.gov\",\n            \"role\": \"Project Manager\",\n            \"password\": \"HLur8P0\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"gkeys2n@netvibes.com\",\n            \"role\": \"Estimator\",\n            \"password\": \"AvGmAuf1b\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"tspedding2o@sciencedirect.com\",\n            \"role\": \"Construction Foreman\",\n            \"password\": \"gceCxisIrK1P\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"cborrill2p@sciencedirect.com\",\n            \"role\": \"Project Manager\",\n            \"password\": \"L38dNYJaR6F\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"ceard2q@china.com.cn\",\n            \"role\": \"Supervisor\",\n            \"password\": \"6zZaAQONzaDl\",\n            \"gender\": \"Female\"\n        },\n        {\n            \"email\": \"sduligall2r@washington.edu\",\n            \"role\": \"Engineer\",\n            \"password\": \"6VHZvc2E\",\n            \"gender\": \"Male\"\n        },\n        {\n            \"email\": \"tesupdate@gmail.com\",\n            \"role\": \"Electrician\",\n            \"password\": \"fk3GyIGQm\",\n            \"gender\": \"Female\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "All User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All User by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77-ljxDhaYdc0zv6m/CseOB1nev1vk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:26:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"email\": \"ebroadey6@guardian.co.uk\",\n        \"role\": \"Subcontractor\",\n        \"password\": \"YkEXnE\",\n        \"gender\": \"Male\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tesupdate@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tesupdate@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "18"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-AmUN6m0VmxopoOPOlGWFmU6VQTA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:29:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User Updated Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tesupdate@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tesupdate@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "54"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-e0L0zyxZBRE2Kq7qlGvOV7s23QI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:29:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User Deleted Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"upin dan ipin\",\r\n    \"genres\": \"comedy|adventure\",\r\n    \"year\": \"2011\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"upin dan ipin\",\r\n    \"genres\": \"comedy|adventure\",\r\n    \"year\": \"2011\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-4pMnoIynNJ8B5Dkh5bDFMaRtCKo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:31:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie Created Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "All Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Movie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "8983"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2317-5DAOcD/wtGiV0GPCdY02WvcnRsA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:15:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"succes\": true,\n    \"data\": [\n        {\n            \"title\": \"Reckless\",\n            \"genres\": \"Comedy|Drama|Romance\",\n            \"year\": \"2001\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"When a Man Loves a Woman\",\n            \"genres\": \"Drama|Romance\",\n            \"year\": \"1995\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Creature\",\n            \"genres\": \"Documentary\",\n            \"year\": \"1997\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"The Magical Legend of the Leprechauns\",\n            \"genres\": \"Adventure|Children|Comedy|Fantasy|Romance\",\n            \"year\": \"2010\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Marilena de la P7\",\n            \"genres\": \"Drama|Fantasy\",\n            \"year\": \"1984\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Battle of Algiers, The (La battaglia di Algeri)\",\n            \"genres\": \"Drama|War\",\n            \"year\": \"2012\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Winning of Barbara Worth, The\",\n            \"genres\": \"Drama|Romance|Western\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Pleasure at Her Majesty's\",\n            \"genres\": \"Comedy|Documentary\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Gang Related\",\n            \"genres\": \"Crime\",\n            \"year\": \"1993\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Man Behind the Gun, The\",\n            \"genres\": \"Western\",\n            \"year\": \"1993\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Half a Loaf of Kung Fu (Dian zhi gong fu gan chian chan)\",\n            \"genres\": \"Action|Comedy\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Otaku\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2004\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Repeaters \",\n            \"genres\": \"Action|Drama\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Party Monster\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Two Days, One Night (Deux jours, une nuit)\",\n            \"genres\": \"Drama\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"To Be or Not to Be\",\n            \"genres\": \"Comedy|Drama|War\",\n            \"year\": \"2011\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Good Student, The (Mr. Gibb)\",\n            \"genres\": \"Comedy\",\n            \"year\": \"1986\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Synth Britannia\",\n            \"genres\": \"Documentary\",\n            \"year\": \"1995\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Skenbart: En film om tåg\",\n            \"genres\": \"Comedy\",\n            \"year\": \"1993\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"The Improv: 50 Years Behind the Brick Wall\",\n            \"genres\": \"Comedy|Documentary\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Naan Kadavul\",\n            \"genres\": \"Action|Drama|Mystery\",\n            \"year\": \"2011\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Fitzcarraldo\",\n            \"genres\": \"Adventure|Drama\",\n            \"year\": \"2004\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Liam\",\n            \"genres\": \"Drama\",\n            \"year\": \"2010\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Monkey Business\",\n            \"genres\": \"Comedy\",\n            \"year\": \"2012\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Run Sister Run!\",\n            \"genres\": \"Drama\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Police Story (Ging chaat goo si)\",\n            \"genres\": \"Action|Comedy|Crime|Thriller\",\n            \"year\": \"1991\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Come Drink with Me (Da zui xia)\",\n            \"genres\": \"Action|Adventure|Crime\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Libre échange\",\n            \"genres\": \"Comedy\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Little Monsters\",\n            \"genres\": \"Comedy\",\n            \"year\": \"2005\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Hunter, The\",\n            \"genres\": \"Action|Thriller\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Bite the Bullet\",\n            \"genres\": \"Action|Adventure|Western\",\n            \"year\": \"1994\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Praying with Lior\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2008\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"State Fair\",\n            \"genres\": \"Comedy|Drama|Romance\",\n            \"year\": \"1997\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Ursul\",\n            \"genres\": \"Comedy|Drama\",\n            \"year\": \"1996\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"In Fear\",\n            \"genres\": \"Thriller\",\n            \"year\": \"2000\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Hamlet\",\n            \"genres\": \"Drama\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Lights Out\",\n            \"genres\": \"Drama|Mystery|Thriller\",\n            \"year\": \"2001\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Tommy\",\n            \"genres\": \"Drama|Musical\",\n            \"year\": \"2001\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"61*\",\n            \"genres\": \"Drama\",\n            \"year\": \"2010\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Black Sunday (La maschera del demonio)\",\n            \"genres\": \"Horror\",\n            \"year\": \"2003\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Run Sister Run!\",\n            \"genres\": \"Drama\",\n            \"year\": \"2003\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Atomic States of America, The\",\n            \"genres\": \"Documentary\",\n            \"year\": \"1992\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"2046\",\n            \"genres\": \"Drama|Fantasy|Romance|Sci-Fi\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Piano in a Factory, The (Gang de qin)\",\n            \"genres\": \"Comedy|Drama|Musical\",\n            \"year\": \"2005\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Marc Maron: Thinky Pain\",\n            \"genres\": \"Comedy\",\n            \"year\": \"1995\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Year Zero: The Silent Death of Cambodia\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2005\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Valley of the Bees (Údolí vcel)\",\n            \"genres\": \"Drama\",\n            \"year\": \"1994\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Spider-Man 2\",\n            \"genres\": \"Action|Adventure|Sci-Fi|IMAX\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Sin Retorno\",\n            \"genres\": \"Drama|Thriller\",\n            \"year\": \"2005\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Harder They Fall, The\",\n            \"genres\": \"Drama|Film-Noir\",\n            \"year\": \"1990\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Ingrid\",\n            \"genres\": \"Drama\",\n            \"year\": \"1994\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"While You Were Sleeping\",\n            \"genres\": \"Comedy|Romance\",\n            \"year\": \"1990\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Experimenter\",\n            \"genres\": \"Drama\",\n            \"year\": \"1992\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Or (a.k.a. My Treasure)\",\n            \"genres\": \"Drama\",\n            \"year\": \"1997\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Perfume\",\n            \"genres\": \"Comedy|Drama\",\n            \"year\": \"1989\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Wonder Boys\",\n            \"genres\": \"Comedy|Drama\",\n            \"year\": \"1998\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Young Törless, The (Junge Törless, Der)\",\n            \"genres\": \"Drama\",\n            \"year\": \"1983\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Conversation Piece (Gruppo di famiglia in un interno)\",\n            \"genres\": \"Drama\",\n            \"year\": \"2010\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Clean and Sober\",\n            \"genres\": \"Drama\",\n            \"year\": \"2004\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Michael Jackson's This Is It\",\n            \"genres\": \"Documentary|Musical|IMAX\",\n            \"year\": \"1999\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Napoleon and Samantha\",\n            \"genres\": \"Adventure|Drama\",\n            \"year\": \"2000\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Last Real Men, The (Die letzten Männer)\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2003\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"B. Monkey\",\n            \"genres\": \"Crime|Romance|Thriller\",\n            \"year\": \"2000\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Everything or Nothing: The Untold Story of 007\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Operation Crossbow\",\n            \"genres\": \"Action|Adventure|War\",\n            \"year\": \"2004\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Tere Naam\",\n            \"genres\": \"Romance\",\n            \"year\": \"2003\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Jay And Silent Bob's Super Groovy Cartoon Movie\",\n            \"genres\": \"(no genres listed)\",\n            \"year\": \"1989\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Sex and Zen (Rou pu Tuan zhi tou Qing bao Jian)\",\n            \"genres\": \"Action|Adventure|Comedy|Fantasy\",\n            \"year\": \"2009\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Korso\",\n            \"genres\": \"Drama\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Booty Call\",\n            \"genres\": \"Comedy|Romance\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"In the Mirror of Maya Deren (Im Spiegel der Maya Deren)\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2012\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Maid to Order\",\n            \"genres\": \"Comedy|Fantasy\",\n            \"year\": \"1995\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Alice (Neco z Alenky)\",\n            \"genres\": \"Animation|Fantasy|Mystery\",\n            \"year\": \"2011\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Zotz!\",\n            \"genres\": \"Comedy|Fantasy|Horror\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Hero (Ying xiong)\",\n            \"genres\": \"Action|Adventure|Drama\",\n            \"year\": \"2012\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Bed & Board (Domicile conjugal)\",\n            \"genres\": \"Comedy|Drama\",\n            \"year\": \"1999\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Nature of the Beast, The\",\n            \"genres\": \"Crime|Horror|Mystery|Thriller\",\n            \"year\": \"1986\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Odgrobadogroba\",\n            \"genres\": \"Comedy|Drama\",\n            \"year\": \"1997\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Teen Spirit\",\n            \"genres\": \"Comedy\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Ghost of Frankenstein, The\",\n            \"genres\": \"Horror\",\n            \"year\": \"2013\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Wadjda\",\n            \"genres\": \"Drama\",\n            \"year\": \"2002\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Blackout\",\n            \"genres\": \"Action|Thriller\",\n            \"year\": \"1996\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Secret of Moonacre, The\",\n            \"genres\": \"Adventure|Fantasy|Romance\",\n            \"year\": \"2008\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Pillow Talk\",\n            \"genres\": \"Comedy|Musical|Romance\",\n            \"year\": \"1999\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Lonely Guy, The\",\n            \"genres\": \"Comedy\",\n            \"year\": \"2008\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Heavy Metal\",\n            \"genres\": \"Action|Adventure|Animation|Horror|Sci-Fi\",\n            \"year\": \"2007\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Bride Wars\",\n            \"genres\": \"Comedy|Romance\",\n            \"year\": \"1989\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"In Your Hands\",\n            \"genres\": \"Drama\",\n            \"year\": \"2002\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Lucky Jordan\",\n            \"genres\": \"Comedy|Crime|Drama\",\n            \"year\": \"2012\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Mostly Martha (Bella Martha)\",\n            \"genres\": \"Comedy|Drama|Romance\",\n            \"year\": \"2002\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Quebrando o Tabu\",\n            \"genres\": \"Documentary\",\n            \"year\": \"2011\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"Outlaw Josey Wales, The\",\n            \"genres\": \"Action|Adventure|Drama|Thriller|Western\",\n            \"year\": \"2006\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"asd1\",\n            \"genres\": \"asda3\",\n            \"year\": \"asda2\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"harry potter\",\n            \"genres\": \"adventure|action\",\n            \"year\": \"2001\",\n            \"photo\": \"http://localhost:8081/public/1697691708998-image.png\"\n        },\n        {\n            \"title\": \"rangga\",\n            \"genres\": \"action\",\n            \"year\": \"3131\",\n            \"photo\": \"http://localhost:8081/public/1697677073726-image.png\"\n        },\n        {\n            \"title\": \"spongebob\",\n            \"genres\": \"comedy\",\n            \"year\": \"2018\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"spongebob\",\n            \"genres\": \"comedy\",\n            \"year\": \"2018\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"spongebob\",\n            \"genres\": \"comedy\",\n            \"year\": \"2018\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"asdad\",\n            \"genres\": \"comedy\",\n            \"year\": \"2018\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"kampret\",\n            \"genres\": \"Adventure|Drama|Romance\",\n            \"year\": \"1990\",\n            \"photo\": null\n        },\n        {\n            \"title\": \"harryasd potter\",\n            \"genres\": \"adventure|action\",\n            \"year\": \"2001\",\n            \"photo\": \"http://localhost:8081/public/1697695282258-image.png\"\n        },\n        {\n            \"title\": \"harryasd potter\",\n            \"genres\": \"adventure|action\",\n            \"year\": \"2001\",\n            \"photo\": \"http://localhost:8081/public/1697695869582-image.png\"\n        },\n        {\n            \"title\": \"kampret\",\n            \"genres\": \"Documentary\",\n            \"year\": \"1993\",\n            \"photo\": \"http://localhost:8081/public/1697677102595-image.png\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "All Movie by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/movie/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "444"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Movie by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6f-Fj0lDztnDHTKnPl9w8rfmduHaTc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:17:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"succes\": true,\n    \"data\": {\n        \"title\": \"When a Man Loves a Woman\",\n        \"genres\": \"Drama|Romance\",\n        \"year\": \"1995\",\n        \"photo\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Numbernine/Downloads/image.png"
+								},
+								{
+									"key": "title",
+									"value": "harryasd potter",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "adventure|action",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2001",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movie/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "92"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Movie",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Numbernine/Downloads/image.png"
+										},
+										{
+											"key": "title",
+											"value": "harryasd potter",
+											"type": "text"
+										},
+										{
+											"key": "genres",
+											"value": "adventure|action",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2001",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/movie/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "92"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-Q20tDkr5XuhSOmH4B/hgzPFHy44\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:20:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"succes\": true,\n    \"message\": \"Movie Updated Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/movie/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Movie",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/movie/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "23"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-bI/wmVuCx4DeJ3g3/mnyd3+xFTA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 06:18:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"succes\": true,\n    \"message\": \"Movie Deleted Successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

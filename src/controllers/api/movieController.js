@@ -2,7 +2,8 @@ const { movieService } = require("../../services");
 
 const createMovie = async (req, res, next) => {
   try {
-    if (!req.body.title) throw { name: "errNotFound" };
+    if (!req.body.title || !req.body.genres || !req.body.genres)
+      throw { name: "errNotFound" };
     await movieService.createMovie(req.body);
 
     res.status(201).json({ message: "Movie Created Successfully" });
@@ -23,7 +24,7 @@ const getMovies = async (req, res) => {
 
 const getMovieId = async (req, res, next) => {
   try {
-    const movie = await movieService.getMovieId(req.params);
+    const movie = await movieService.getMovieId(req.params.id);
     if (!movie) throw { name: "errNotFound" };
 
     res.status(200).json({ succes: true, data: movie });
@@ -34,23 +35,25 @@ const getMovieId = async (req, res, next) => {
 
 const updateMovie = async (req, res, next) => {
   try {
-    const movie = await movieService.getMovieId(req.params);
+    const id = req.params.id;
+    const movie = await movieService.getMovieId(id);
     if (!movie) throw { name: "errNotFound" };
-    await movieService.updateMovie(req, movie);
+    await movieService.updateMovie(req, id);
 
     res
       .status(200)
       .json({ succes: true, message: "Movie Updated Successfully" });
   } catch (error) {
-    res.json({ error: error.message });
+    next(error);
   }
 };
 
 const deleteMovie = async (req, res, next) => {
   try {
-    const movie = await movieService.getMovieId(req.params);
+    const id = req.params.id;
+    const movie = await movieService.getMovieId(id);
     if (!movie) throw { name: "errNotFound" };
-    await movieService.deleteMovie(movie);
+    await movieService.deleteMovie(id);
 
     res
       .status(200)
