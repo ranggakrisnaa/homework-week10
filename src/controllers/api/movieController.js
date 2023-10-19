@@ -1,39 +1,69 @@
 const { movieService } = require("../../services");
 
-const createMovie = async (req, res) => {
+const createMovie = async (req, res, next) => {
   try {
-    const { title, genres, year } = req.body;
+    if (!req.body.title) throw { name: "errNotFound" };
+    await movieService.createMovie(req.body);
 
-    await movieService.createMovie({ title, genres, year });
-    res.json({ message: "data successfully created" });
+    res.status(201).json({ message: "Movie Created Successfully" });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getMovies = async (req, res) => {
+  try {
+    const movies = await movieService.getMovies();
+
+    res.status(200).json({ succes: true, data: movies });
   } catch (error) {
     res.json({ error: error });
   }
 };
 
+const getMovieId = async (req, res, next) => {
+  try {
+    const movie = await movieService.getMovieId(req.params);
+    if (!movie) throw { name: "errNotFound" };
+
+    res.status(200).json({ succes: true, data: movie });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const updateMovie = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const { title, genres, year } = req.body;
-    const file = req.file;
-    console.log(file);
-    const updatedData = {
-      title,
-      genres,
-      year,
-    };
+    const movie = await movieService.getMovieId(req.params);
+    if (!movie) throw { name: "errNotFound" };
+    await movieService.updateMovie(req, movie);
 
-    const movie = await movieService.getMovieId(id);
-
-    if (movie) {
-      const data = await movieService.updateMovie(updatedData, id);
-    } else {
-      res.json({ message: "Movie not found" });
-    }
-    res.json({ message: "success" });
+    res
+      .status(200)
+      .json({ succes: true, message: "Movie Updated Successfully" });
   } catch (error) {
     res.json({ error: error.message });
   }
 };
 
-module.exports = { createMovie, updateMovie };
+const deleteMovie = async (req, res, next) => {
+  try {
+    const movie = await movieService.getMovieId(req.params);
+    if (!movie) throw { name: "errNotFound" };
+    await movieService.deleteMovie(movie);
+
+    res
+      .status(200)
+      .json({ succes: true, message: "Movie Deleted Successfully" });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {
+  createMovie,
+  updateMovie,
+  getMovies,
+  getMovieId,
+  deleteMovie,
+};

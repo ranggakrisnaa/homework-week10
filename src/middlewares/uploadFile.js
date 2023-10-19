@@ -1,8 +1,14 @@
 const multer = require("multer");
+const fs = require("fs");
+
+const path = "./public";
+fs.mkdir(path, { recursive: true }, (err) => {
+  if (err) throw err;
+});
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "./public/");
+    cb(null, "./public");
   },
   filename: function (req, file, cb) {
     const fileName = file.originalname.toLowerCase().split(" ").join("-");

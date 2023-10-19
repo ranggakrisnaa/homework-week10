@@ -1,19 +1,74 @@
 const { movieRepository } = require("../repositories");
 
-const getMovies = () => {
-  return movieRepository.findAll();
+const getMovies = (args) => {
+  try {
+    return movieRepository.findAll(args);
+  } catch (error) {
+    throw error;
+  }
 };
 
-const getMovieId = (id) => {
-  return movieRepository.findOne(id);
+const getMovieId = (args) => {
+  try {
+    const { id } = args;
+    console.log(id);
+    return movieRepository.findOne(id);
+  } catch (error) {
+    throw error;
+  }
 };
 
-const updateMovie = (args, id) => {
-  return movieRepository.update(args, id);
+const updateMovie = (req, data) => {
+  try {
+    const { title, genres, year } = req.body;
+
+    let moviePayload = {
+      title,
+      genres,
+      year,
+    };
+
+    if (req.file) {
+      const file = req.file.filename;
+      const imageUrl = `http://localhost:8081/public/${file}`;
+      moviePayload = {
+        ...moviePayload,
+        photo: imageUrl,
+      };
+    }
+    return movieRepository.update(moviePayload, data);
+  } catch (error) {
+    throw error;
+  }
 };
 
 const createMovie = (args) => {
-  return movieRepository.create(args);
+  try {
+    const { title, genres, year } = args;
+
+    const moviePayload = {
+      title,
+      genres,
+      year,
+    };
+    return movieRepository.create(moviePayload);
+  } catch (error) {
+    throw err;
+  }
 };
 
-module.exports = { createMovie, getMovies, getMovieId, updateMovie };
+const deleteMovie = (args) => {
+  try {
+    return movieRepository.destroy(args);
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports = {
+  createMovie,
+  getMovies,
+  getMovieId,
+  updateMovie,
+  deleteMovie,
+};
