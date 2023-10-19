@@ -1,5 +1,9 @@
 const { User } = require("../models");
 
+const create = (args) => {
+  return User.create(args);
+};
+
 const findAll = () => {
   return User.findAll({ attributes: ["email", "role", "password", "gender"] });
 };
@@ -9,10 +13,6 @@ const findbyId = (id) => {
     where: { id },
     attributes: ["email", "role", "password", "gender"],
   });
-};
-
-const create = (args) => {
-  return User.create(args);
 };
 
 const update = async (args, id) => {

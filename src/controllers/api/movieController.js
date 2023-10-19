@@ -48,6 +48,21 @@ const updateMovie = async (req, res, next) => {
   }
 };
 
+const uploadImage = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const movie = await movieService.getMovieId(id);
+    if (!movie) throw { name: "errNotFound" };
+    await movieService.uploadImage(req, movie, id);
+
+    res
+      .status(200)
+      .json({ succes: true, message: "Insert Photo in Movie Successfully" });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const deleteMovie = async (req, res, next) => {
   try {
     const id = req.params.id;
@@ -69,4 +84,5 @@ module.exports = {
   getMovies,
   getMovieId,
   deleteMovie,
+  uploadImage,
 };

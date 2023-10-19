@@ -1,5 +1,9 @@
 const { Movie } = require("../models");
 
+const create = (args) => {
+  return Movie.create(args);
+};
+
 const findAll = () => {
   return Movie.findAll({
     attributes: ["title", "genres", "year", "photo"],
@@ -18,10 +22,6 @@ const update = async (args, id) => {
     where: { id },
   });
   return data.update(args);
-};
-
-const create = (args) => {
-  return Movie.create(args);
 };
 
 const destroy = async (id) => {

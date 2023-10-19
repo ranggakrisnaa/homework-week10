@@ -295,7 +295,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "16"
+									"value": "77"
 								}
 							]
 						}
@@ -402,7 +402,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "6"
+									"value": "119"
 								}
 							]
 						}
@@ -673,7 +673,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "444"
+									"value": "2"
 								}
 							]
 						}
@@ -748,30 +748,13 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "file",
-									"type": "file",
-									"src": "/C:/Users/Numbernine/Downloads/image.png"
-								},
-								{
-									"key": "title",
-									"value": "harryasd potter",
-									"type": "text"
-								},
-								{
-									"key": "genres",
-									"value": "adventure|action",
-									"type": "text"
-								},
-								{
-									"key": "year",
-									"value": "2001",
-									"type": "text",
-									"disabled": true
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"tes update movie\",\r\n    \"genres\": \"tes\",\r\n    \"year\": \"2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "http://localhost:8081/api/movie/:id",
@@ -788,7 +771,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "92"
+									"value": "105"
 								}
 							]
 						}
@@ -800,30 +783,13 @@
 								"method": "PUT",
 								"header": [],
 								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"src": "/C:/Users/Numbernine/Downloads/image.png"
-										},
-										{
-											"key": "title",
-											"value": "harryasd potter",
-											"type": "text"
-										},
-										{
-											"key": "genres",
-											"value": "adventure|action",
-											"type": "text"
-										},
-										{
-											"key": "year",
-											"value": "2001",
-											"type": "text",
-											"disabled": true
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"tes update movie\",\r\n    \"genres\": \"tes\",\r\n    \"year\": \"2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
 										}
-									]
+									}
 								},
 								"url": {
 									"raw": "http://localhost:8081/api/movie/:id",
@@ -840,7 +806,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "92"
+											"value": "88"
 										}
 									]
 								}
@@ -867,7 +833,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 19 Oct 2023 06:20:55 GMT"
+									"value": "Thu, 19 Oct 2023 10:25:57 GMT"
 								},
 								{
 									"key": "Connection",
@@ -880,6 +846,117 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"succes\": true,\n    \"message\": \"Movie Updated Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Numbernine/Downloads/pp-buruto-time-to-skip.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/movie/uploads/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"movie",
+								"uploads",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "96"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Image",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Numbernine/Downloads/pp-buruto-time-to-skip.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/movie/uploads/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"movie",
+										"uploads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "97"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-NUCHMG5w+QMb/fZxCUQ9pXexB5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 10:15:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"succes\": true,\n    \"message\": \"Insert Photo in Movie Successfully\"\n}"
 						}
 					]
 				},
@@ -903,7 +980,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "5"
+									"value": "120"
 								}
 							]
 						}
