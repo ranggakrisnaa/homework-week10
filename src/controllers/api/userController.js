@@ -2,8 +2,6 @@ const { userService } = require("../../services");
 
 const createUser = async (req, res, next) => {
   try {
-    if (!req.body.email || !req.body.password || !req.body.gender)
-      throw { name: "errNotFound" };
     await userService.createUser(req.body);
 
     res

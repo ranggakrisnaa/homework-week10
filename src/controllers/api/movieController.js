@@ -2,8 +2,6 @@ const { movieService } = require("../../services");
 
 const createMovie = async (req, res, next) => {
   try {
-    if (!req.body.title || !req.body.genres || !req.body.genres)
-      throw { name: "errNotFound" };
     await movieService.createMovie(req.body);
 
     res.status(201).json({ message: "Movie Created Successfully" });
