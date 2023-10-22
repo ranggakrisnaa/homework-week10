@@ -34,7 +34,6 @@ const getMovieId = (id) => {
 const updateMovie = (req, id) => {
   try {
     const { title, genres, year } = req.body;
-    console.log(title);
     let moviePayload = {
       title,
       genres,
