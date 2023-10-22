@@ -8,24 +8,24 @@ const {
 } = require("../middlewares/validator");
 
 router.post(
-  "/movie",
+  "/movies",
   movieValidate,
   handleValidationErrors,
   movieController.createMovie
 );
-router.get("/movie", movieController.getMovies);
-router.get("/movie/:id", movieController.getMovieId);
+router.get("/movies", movieController.getMovies);
+router.get("/movies/:id", movieController.getMovieId);
 router.put(
-  "/movie/:id",
+  "/movies/:id",
   movieValidate,
   handleValidationErrors,
   movieController.updateMovie
 );
 router.put(
-  "/movie/uploads/:id",
+  "/movies/uploads/:id",
   upload.single("file"),
   movieController.uploadImage
 );
-router.delete("/movie/:id", movieController.deleteMovie);
+router.delete("/movies/:id", movieController.deleteMovie);
 
 module.exports = router;
